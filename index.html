@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <!-- Slick JavaScript -->
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <style>
+        .slick-slide img {
+            width: 100%;
+            height: auto;
+        }
+        .slick-track{
+            display: flex !important;
+            gap: 10px;
+        }
+        #client-slider-dots .slick-dots{
+            position: relative !important;
+            bottom: 0 !important;
+        }
+        #client-slider-dots .slick-dots li button::before{
+            font-size: 12px !important;
+        }
+        .header {
+            /* Existing styles */
+            opacity: 0; /* Set initial opacity to 0 */
+            animation: fadeIn 1.5s ease forwards; /* Apply fadeIn animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0; /* Start opacity from 0 */
+            }
+            to {
+                opacity: 1; /* End opacity to 1 */
+            }
+        }
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <title>AlphaFit Accounting</title>
+</head>
+<body>
+    <header class="header box">
+        <div class="navigator">
+            <div class="logo">
+                <img src="./images/logo.png" alt="" class="logo_img">
+            </div>
+            <ul class="nav_container">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile_nav_menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            </div>
+            <div class="close">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </div>
+        </div>
+        
+        <div class="heading-container">
+            <div class="heading">
+              <h1>AlphaFit Accounting</h1>
+            <p>Expertise. Commitment. Value</p>  
+            </div>
+        </div>
+    </header>
+    <section class="about box" id="about">
+        <div class="profile_img">
+            <img src="./images/company.jpg" alt="" class="company_profile">
+        </div>
+        <div class="profile">
+            <h2>Company Profile</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quam ratione mollitia, doloremque dolorem sequi deleniti sint error, quae temporibus harum eum.</p>
+        </div>
+    </section>
+    <section class="services box" id="services">
+        <div class="services_img">
+            <h2>Our Services</h2>
+            <img src="./images/ourServices.jpg" alt="">
+        </div>
+        <div class="services_container">
+            <div class="service">
+                <h3><span>01</span>Tax Preparation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="service">
+                <h3><span>02</span>Tax Preparation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="service">
+                <h3><span>03</span>Tax Preparation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+        </div>
+    </section>
+    <section class="clients box" id="clients">
+        <div class="clients_title">
+            <h2>Our Client Roster</h2>
+            <p>
+                From our early days, we've been providing reliable service to our clientele. <br>
+                We've had the honor of being the firm of choice of the following corporations:
+            </p>
+        </div>
+
+        <div class="clients_container" id="client-slider">
+            <!-- Your client slides go here -->
+            <div class="client">
+                <img src="./images/1.jpg" alt="client 1">
+                <h4>Belden Bank LTD</h4>
+            </div>
+            <div class="client">
+                <img src="./images/2.jpg" alt="client 2">
+                <h4>BMichaelson Digital</h4>
+            </div>
+            <div class="client">
+                <img src="./images/3.jpg" alt="client 3">
+                <h4>Perlanton Securities</h4>
+            </div>
+            <div class="client">
+                <img src="./images/2.jpg" alt="client 4">
+                <h4>Another Client</h4>
+            </div>
+            <!-- Add more client slides as needed -->
+        </div>
+        <div id="client-slider-dots"></div> 
+    </section>
+    <section class="contact box" id="contact">
+        <div class="contact_img">
+            <h2>Contact Us</h2>
+            <img src="./images/contact-us.png" alt="contact us image">
+        </div>
+        <div class="contact_info_container">
+            <div class="contact_info">
+                <h3>Mailing Address</h3>
+                <p>123 Anywhere St. Any City, ST 12345
+                </p>
+            </div>
+            <div class="contact_info">
+                <h3>Phone Number</h3>
+                <p>(123) 456-7890
+                </p>
+            </div>
+            <div class="contact_info">
+                <h3>Email Address</h3>
+                <p>hello@reallygreatsite.com
+                </p>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
